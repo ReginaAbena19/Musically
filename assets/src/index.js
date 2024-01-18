@@ -20,8 +20,8 @@ document.addEventListener('DOMContentloaded',function() {
   //     return data.access_token;
   //   }
 
-  var client_id = '0c76d90f65ea4b4bb5f976d33c428a63';
-  var client_secret = 'deae7c9da6324738b3306a9a902fd74b';
+  var client_id = 'PLEASE ENTER YOUR CREDENTIALS HERE';
+  var client_secret = 'PLEASE ENTER YOUR CREDENTIALS HERE';
 
   var authOptions = {
     url: 'https://accounts.spotify.com/api/token',
