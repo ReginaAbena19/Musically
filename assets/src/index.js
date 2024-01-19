@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const APIcontroller = function () {
-      const clientId = "clientID";
-      const clientSecret = "clientSecret";
+      const clientId = "";
+      const clientSecret = "";
 
       const getToken = async () => {
           const result = await fetch(
