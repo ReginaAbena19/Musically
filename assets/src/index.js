@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const APIcontroller = function () {
-      const clientId = "clientID";
-      const clientSecret = "clientSecret";
+      const clientId = "0c76d90f65ea4b4bb5f976d33c428a63";
+      const clientSecret = "0fd06633daa54f21b4b9b9b1b328aacb";
 
       const getToken = async () => {
           const result = await fetch(
@@ -49,16 +49,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   $("#search-button").on("click", async function (event) {
-      event.preventDefault();
-      const searchInput = $("#search-input").val().trim();
+    event.preventDefault();
+    const searchInput = $("#search-input").val().trim();
 
-      try {
-          const token = await apiController.getToken();
-          const genres = await apiController.getGenres(token);
-          console.log(genres);
-          createBtn(searchInput);
-      } catch (error) {
-          console.error("Error:", error);
-      }
-  });
+    try {
+        const token = await apiController.getToken();
+        const genres = await apiController.getGenres(token);
+
+        // Filter genres based on the search input
+        const matchingGenres = genres.filter(genre => genre.name.toLowerCase().includes(searchInput.toLowerCase()));
+
+        // Display matching genres in the console
+        console.log(matchingGenres);
+
+        // Create buttons for matching genres
+        matchingGenres.forEach(genre => createBtn(genre.name));
+    } catch (error) {
+        console.error("Error:", error);
+    }
+});
 });
