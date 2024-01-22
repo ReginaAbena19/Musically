@@ -1,3 +1,34 @@
+/* body{
+  background-color: #992BD6;
+  display: flex;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Urbanist', sans-serif;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+input{
+  display: none;
+}
+
+#s1:checked-.cards #slide1,
+#s2:checked-.cards #slide2,
+#s3:checked-.cards #slide3,
+
+  box-shadow; 0 20px 40px rgba(0, 0, 0, 50%);
+  transform: translate3d(-35%, 0, -120px);
+  --current-color1: #eceaed;
+  --currente-color2: #404457;
+
+
+
 #search-button {
   background-color: #20315a !important;
-}
+} */
