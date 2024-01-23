@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  let API_KEY = "ENTER_YOUR_API_KEY_HERE";
+  let API_KEY = "AIzaSyC1gwmm6FyohjBQUgon03lAK1VXgIHM0WU";
   let video = "";
 
   $("#form").submit(function(event){
