@@ -211,7 +211,7 @@ const UIController = (function() {
 
             $("#heart").on("click", function() {
                 // $(this).preventDefault();
-                console.log($(this)[0]);
+                console.log($(this).data());
             });
         },
 
@@ -319,15 +319,6 @@ const APPController = (function(UICtrl, APICtrl) {
     }
 
 })(UIController, APIController);
-
-// $("#song-container").on("click", 'i', function() {
-//     // $(this).preventDefault();
-//     console.log($(this));
-// });
-
-function saveSong (event) {
-   
-}
 
 // will need to call a method to load the genres on page load
 APPController.init();
