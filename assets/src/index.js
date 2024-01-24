@@ -201,13 +201,18 @@ const UIController = (function() {
                     </div>
                     <a id="details-colour" class="btn-contact">details</a>
                     <div class="socials">
-                        <i class="fa fa-heart" id="heart"></i>
+                        <i class="fa fa-heart" id="heart" data-artist="${artist}" data-song="${title}"></i>
                     </div>
                     </div>
                 </label>
             `;
 
             detailDiv.insertAdjacentHTML('beforeend', html)
+
+            $("#heart").on("click", function() {
+                // $(this).preventDefault();
+                console.log($(this)[0]);
+            });
         },
 
         resetTrackDetail() {
@@ -315,10 +320,10 @@ const APPController = (function(UICtrl, APICtrl) {
 
 })(UIController, APIController);
 
-$("#song-container").on("click",  function() {
-    $(this).preventDefault();
-    console.log($(this));
-});
+// $("#song-container").on("click", 'i', function() {
+//     // $(this).preventDefault();
+//     console.log($(this));
+// });
 
 function saveSong (event) {
    
