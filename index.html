@@ -31,7 +31,7 @@
         <button type="button" class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#buttonInstructionsModal" id="buttonText">
           Instructions
         </button>
-        <button type="button" class="btn btn-warning" id="buttonText">Library
+        <button type="button" class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#libraryModal" id="buttonText">Library
           <i class="fa fa-heart"></i>
         </button>
         <button type="button" class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#play" id="buttonText">
@@ -60,6 +60,24 @@
               <li>5. The user will also be able to sample a song from the artist</li>
               <li>6. View potential tour dates</li>
             </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="libraryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="libraryModal">My Library</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4>Saved Songs</h4>
+          <div></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
