@@ -1,7 +1,7 @@
 const APIController = (function() {
     
-    const clientId = 'ENTER_YOUR_CLIENT_ID_HERE';
-    const clientSecret = 'ENTER_YOUR_CLIENT_SECRET_HERE';
+    const clientId = '0c76d90f65ea4b4bb5f976d33c428a63';
+    const clientSecret = '0fd06633daa54f21b4b9b9b1b328aacb';
 
     // private methods
     const _getToken = async () => {
@@ -90,7 +90,7 @@ const APIController = (function() {
 //youtube api
 $(document).ready(function(){
 
-    let API_KEY = "ENTER_YOUR_YOUTUBE_APIKEYS_HERE";
+    let API_KEY = "AIzaSyC1gwmm6FyohjBQUgon03lAK1VXgIHM0WU";
     let video = "";
   
     $("#form").submit(function(event){
@@ -201,7 +201,7 @@ const UIController = (function() {
                     </div>
                     <a id="details-colour" class="btn-contact">details</a>
                     <div class="socials">
-                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-heart" id="heart"></i>
                     </div>
                     </div>
                 </label>
@@ -314,6 +314,15 @@ const APPController = (function(UICtrl, APICtrl) {
     }
 
 })(UIController, APIController);
+
+$("#song-container").on("click",  function() {
+    $(this).preventDefault();
+    console.log($(this));
+});
+
+function saveSong (event) {
+   
+}
 
 // will need to call a method to load the genres on page load
 APPController.init();
