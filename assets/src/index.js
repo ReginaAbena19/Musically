@@ -1,3 +1,5 @@
+var historyEl = $('.savedList');
+
 const APIController = (function() {
     
     const clientId = '0c76d90f65ea4b4bb5f976d33c428a63';
@@ -211,8 +213,12 @@ const UIController = (function() {
 
             $("#heart").on("click", function() {
                 // $(this).preventDefault();
-                console.log($(this).data());
+                var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+                searchHistory.push($(this).data())
+                localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+                renderSearchHistory ();
             });
+
         },
 
         resetTrackDetail() {
@@ -322,3 +328,19 @@ const APPController = (function(UICtrl, APICtrl) {
 
 // will need to call a method to load the genres on page load
 APPController.init();
+
+function renderSearchHistory () {
+    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    searchHistory.forEach((songData) => {
+        console.log(songData)
+    })
+
+    var historyList = $(`<ul class='list-group' id='searchHistoryList'></ul>`);
+    searchHistory.forEach((songData) => {
+        var listItem = $('<li class="list-group-item"></li>');
+        listItem.text(songData.artist + ' - ' + songData.song);
+        historyList.append(listItem);
+    });
+    
+    historyEl.append(historyList);
+};
