@@ -1,9 +1,9 @@
-var historyEl = $('.savedList');
+let historyEl = $('.savedList');
 
 const APIController = (function() {
     
-    const clientId = '0c76d90f65ea4b4bb5f976d33c428a63';
-    const clientSecret = '0fd06633daa54f21b4b9b9b1b328aacb';
+    const clientId = '';
+    const clientSecret = '';
 
     // private methods
     const _getToken = async () => {
@@ -92,7 +92,7 @@ const APIController = (function() {
 //youtube api
 $(document).ready(function(){
 
-    let API_KEY = "AIzaSyC1gwmm6FyohjBQUgon03lAK1VXgIHM0WU";
+    let API_KEY = "";
     let video = "";
   
     $("#form").submit(function(event){
@@ -213,7 +213,7 @@ const UIController = (function() {
 
             $("#heart").on("click", function() {
                 // $(this).preventDefault();
-                var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+                let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
                 searchHistory.push($(this).data())
                 localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
                 renderSearchHistory ();
@@ -330,14 +330,14 @@ const APPController = (function(UICtrl, APICtrl) {
 APPController.init();
 
 function renderSearchHistory () {
-    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
     searchHistory.forEach((songData) => {
         console.log(songData)
     })
 
-    var historyList = $(`<ul class='list-group' id='searchHistoryList'></ul>`);
+    let historyList = $(`<ul class='list-group' id='searchHistoryList'></ul>`);
     searchHistory.forEach((songData) => {
-        var listItem = $('<li class="list-group-item"></li>');
+        let listItem = $('<li class="list-group-item"></li>');
         listItem.text(songData.artist + ' - ' + songData.song);
         historyList.append(listItem);
     });
