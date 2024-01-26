@@ -1,7 +1,9 @@
+let historyEl = $('.savedList');
+
 const APIController = (function() {
     
-    const clientId = 'ENTER_YOUR_CLIENT_ID_HERE';
-    const clientSecret = 'ENTER_YOUR_CLIENT_SECRET_HERE';
+    const clientId = '';
+    const clientSecret = '';
 
     // private methods
     const _getToken = async () => {
@@ -90,7 +92,7 @@ const APIController = (function() {
 //youtube api
 $(document).ready(function(){
 
-    let API_KEY = "ENTER_YOUR_YOUTUBE_APIKEYS_HERE";
+    let API_KEY = "";
     let video = "";
   
     $("#form").submit(function(event){
@@ -201,13 +203,22 @@ const UIController = (function() {
                     </div>
                     <a id="details-colour" class="btn-contact">details</a>
                     <div class="socials">
-                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-heart" id="heart" data-artist="${artist}" data-song="${title}"></i>
                     </div>
                     </div>
                 </label>
             `;
 
             detailDiv.insertAdjacentHTML('beforeend', html)
+
+            $("#heart").on("click", function() {
+                // $(this).preventDefault();
+                let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+                searchHistory.push($(this).data())
+                localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+                renderSearchHistory ();
+            });
+
         },
 
         resetTrackDetail() {
@@ -317,3 +328,19 @@ const APPController = (function(UICtrl, APICtrl) {
 
 // will need to call a method to load the genres on page load
 APPController.init();
+
+function renderSearchHistory () {
+    let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    searchHistory.forEach((songData) => {
+        console.log(songData)
+    })
+
+    let historyList = $(`<ul class='list-group' id='searchHistoryList'></ul>`);
+    searchHistory.forEach((songData) => {
+        let listItem = $('<li class="list-group-item"></li>');
+        listItem.text(songData.artist + ' - ' + songData.song);
+        historyList.append(listItem);
+    });
+    
+    historyEl.append(historyList);
+};
