@@ -120,6 +120,19 @@ necessary authorisation.
 - Search and play the song/ video from the displayed songs 
 - Save your favorites to a library recipes using the "Add to Favorites" button
 
+## Credit/Resources
+Spotify Web API - https://developer.spotify.com/documentation/web-api
+Youtube API - https://developers.google.com/youtube/v3
+
+Javascript: 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+CSS:
+Cards - https://www.youtube.com/watch?v=LBAThoUn3rU&amp;ab_channel=Mathe.%7CCreativeCodingCamp
+
+
 
 ## Licenses
 ---
