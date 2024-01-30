@@ -1,7 +1,7 @@
 const APIController = (function() {
     
-    const clientId = "";
-    const clientSecret = "";
+    const clientId = "ENTER_YOUR_CLIENT_ID_HERE";
+    const clientSecret = "ENTER_YOUR_CLIENT_SECRET_HERE";
 
     // private methods
     const _getToken = async () => {
@@ -90,7 +90,7 @@ const APIController = (function() {
 //youtube api
 $(document).ready(function(){
 
-    let API_KEY = "";
+    let API_KEY = "ENTER_YOUR_YOUTUBE_APIKEYS_HERE";
     let video = "";
   
     $("#form").submit(function(event){
