@@ -2,8 +2,8 @@ let historyEl = $('.savedList');
 
 const APIController = (function() {
     
-    const clientId = 'ENTER_YOUR_CLIENT_ID_HERE';
-    const clientSecret = 'ENTER_YOUR_CLIENT_SECRET_HERE';
+    const clientId = "ENTER_YOUR_CLIENT_ID_HERE";
+    const clientSecret = "ENTER_YOUR_CLIENT_SECRET_HERE";
 
     // private methods
     const _getToken = async () => {
@@ -104,12 +104,12 @@ $(document).ready(function(){
     });
   
     $('#play').on('hidden.bs.modal', function () {
-      // Clear the search input when the modal is closed
-      $("#search").val('');
+        $("#videos").empty();
+        $("#search").val('');
   });
   
     function videoSearch(key,search,maxResults) {
-  
+
         $("#videos").empty();
   
         UIController.resetTrackDetail();
@@ -128,7 +128,7 @@ $(document).ready(function(){
     });
   }
   });
-  
+
   
 // UI Module
 const UIController = (function() {
