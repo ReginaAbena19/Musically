@@ -1,7 +1,7 @@
 const APIController = (function() {
     
-    const clientId = 'ENTER_YOUR_CLIENT_ID_HERE';
-    const clientSecret = 'ENTER_YOUR_CLIENT_SECRET_HERE';
+    const clientId = '0c76d90f65ea4b4bb5f976d33c428a63';
+    const clientSecret = '0fd06633daa54f21b4b9b9b1b328aacb';
 
     // private methods
     const _getToken = async () => {
@@ -90,7 +90,7 @@ const APIController = (function() {
 //youtube api
 $(document).ready(function(){
 
-    let API_KEY = "ENTER_YOUR_YOUTUBE_APIKEYS_HERE";
+    let API_KEY = "AIzaSyC1gwmm6FyohjBQUgon03lAK1VXgIHM0WU";
     let video = "";
   
     $("#form").submit(function(event){
@@ -102,12 +102,12 @@ $(document).ready(function(){
     });
   
     $('#play').on('hidden.bs.modal', function () {
-      // Clear the search input when the modal is closed
-      $("#search").val('');
+        $("#videos").empty();
+        $("#search").val('');
   });
   
     function videoSearch(key,search,maxResults) {
-  
+
         $("#videos").empty();
   
         UIController.resetTrackDetail();
@@ -126,7 +126,7 @@ $(document).ready(function(){
     });
   }
   });
-  
+
   
 // UI Module
 const UIController = (function() {
