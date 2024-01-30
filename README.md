@@ -75,18 +75,22 @@ Below is our approach to this task:
 Overall, we as a group felt we were put to our paces for this challenge in all aspects from styling to API integration to Dom manipulation. Nevertheless, we believe that our proactivity in reading the documentation and researching how to do thing when we were unsure is what has helped us finish our project off. 
 
 ## Future Improvements
----
+Can be found in the presentation here: https://docs.google.com/presentation/d/1sYHsHQNAzi_sKaM_fIkCoZdmaHoeDPLs-bcWbdCg6H0/edit#slide=id.gcb9a0b074_1_0
 
 ## Application Preview
 ---
 
-![Initial wireframe]()
+![Initial wireframe](./assets/app-photos/initial-wireframe.png)
 
-![Application Screenshot 1]()
+![Working wireframe](./assets/app-photos/working-wireframe.png)
 
-![Application Screenshot 2]()
+![Application Screenshot 1](./assets/app-photos/homepage.png)
 
-![Application Screenshot 3]()
+![Application Screenshot 2](./assets/app-photos/song-artist-search.png)
+
+![Application Screenshot 3](./assets/app-photos/youtube-lookup.png)
+
+![Application Screenshot 4](./assets/app-photos/library-saves.png)
 
 
 ## Installation
